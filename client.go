@@ -256,7 +256,7 @@ func (j *JpushClient) Do(method, path string, inp, out interface{}) error {
 		return err
 	}
 
-	println(resp.String(), resp.StatusCode)
+
 
 	if resp.StatusCode >= 300 || resp.StatusCode < 200 {
 		if strings.Contains(resp.String(), "error") {
