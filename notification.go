@@ -8,7 +8,7 @@ type Notification struct {
 }
 
 type AndroidNotification struct {
-	Alert      string                 `json:"alert"`
+	Alert      *string                 `json:"alert,omitempty"`
 	Title      string                 `json:"title,omitempty"`
 	BuilderId  int                    `json:"builder_id,omitempty"`
 	Priority   int                    `json:"priority,omitempty"`
@@ -22,7 +22,7 @@ type AndroidNotification struct {
 }
 
 type IosNotification struct {
-	Alert            interface{}            `json:"alert"`
+	Alert            interface{}            `json:"alert,omitempty"`
 	Sound            string                 `json:"sound,omitempty"`
 	Badge            interface{}            `json:"badge,omitempty"`
 	ContentAvailable bool                   `json:"content-available,omitempty"`
@@ -32,7 +32,7 @@ type IosNotification struct {
 }
 
 type WinPhoneNotification struct {
-	Alert    string                 `json:"alert"`
+	Alert    *string                 `json:"alert,omitempty"`
 	Title    string                 `json:"title,omitempty"`
 	OpenPage string                 `json:"_open_page,omitempty"`
 	Extras   map[string]interface{} `json:"extras,omitempty"`
