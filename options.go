@@ -49,7 +49,11 @@ func option(key string, value interface{}) *Option {
 }
 
 func (p *Option) Value() interface{} {
-	return p.value
+	if p != nil {
+		return p.value
+	} else {
+		return nil
+	}
 }
 
 func (p *Option) IntValue() int {
