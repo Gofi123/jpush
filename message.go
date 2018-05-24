@@ -14,6 +14,7 @@ func NewMessage() *Message {
 }
 
 type SmsMessage struct {
-	Content   string `json:"content"`
-	DelayTime int    `json:"delay_time"`
+	DelayTime int                    `json:"delay_time"`
+	TempId    int64                  `json:"temp_id"`
+	TempPara  map[string]interface{} `json:"temp_para,omitempty"`
 }
